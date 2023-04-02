@@ -1,0 +1,22 @@
+https://docs.google.com/document/d/1irCSyXrV5c-3ILwiZLjVdHW6ionR0e4kuo506ZYbaJA/edit
+
+아마존 리뷰 관리 프로그램 만들기 (연결리스트 활용) 
+
+
+데이터 다운로드 
+https://github.com/eunjicious/ds_2023.git 를 clone 
+amazon_reviews 디렉토리 하에 아래의 파일이 있음. 
+amazon_reviews_us_Shoes_v1_00_short.tsv: 아마존 쇼핑몰에서 신발 관련 리뷰를 모아둔 데이터 중 백만 개만 추출한 데이터. 각 요소는 탭으로 분리. 
+index.txt: 위의 데이터의 각 컬럼이 무엇인지 설명함. 
+
+데이터 분석을 수행할 수 있도록 circularDoublyLinkedList.py 를 확장
+item 을 key 와 value 로 구분하여 저장하도록 BidirectNode 를 확장.
+filter 메소드 함수 구현. filter 함수는 find 함수를 가진 class 객체를 인자로 받음. class 이름은 CircularDoublyLinkedListFilter 로 정의하고, find 함수에서는 circularDoublyLinkedList 에 저장된 데이터 중 특정 조건을 만족하는 Node 를 찾아 파이썬의 내장 자료구조인 리스트로 만들어 return 함. 
+
+위의 기능을 사용해 아마존 고객 리뷰를 분석하는 프로그램을 만드시오 (기능 1개). 
+reviewAnalysis.py 파일에 구현할 것 (아래는 기본 프레임). 
+예: 아마존의 고객 블랙리스트, 평이 좋은 제품 등 
+
+제출기한 
+4/5(수), 4/7(금) 수업시간에 발표. 1인당 3분 이내. 실행 데모 보일 것. 순서는 시작 번호를 랜덤으로 수업시간에 결정한 후, 출석부에서 해당 순번부터 차례대로 진행. 
+아마존 고객리뷰 중 다른 카테고리의 데이터를 사용해도 됨 (index.txt 에 주소가 나와 있음) 
