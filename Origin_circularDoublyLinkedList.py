@@ -1,31 +1,25 @@
 from bidirectNode import BidirectNode
-from circularDoublyLinkedListFilter import *
 
 class CircularDoublyLinkedList:
   def __init__(self):
-    self.__head = BidirectNode( "DumKey", "DumVal", None, None)
+    self.__head = BidirectNode("Dummy", None, None)
     self.__head.prev = self.__head
     self.__head.next = self.__head
     self.__numItems = 0
-    
-  def filter(self, sheet, value):
-    finding = CircularDoublyLinkedListFilter(self, sheet)
-    result = finding.find(value)
-    return result
   
-  def insert(self, i: int, key, val) -> None:
+  def insert(self, i: int, newItem) -> None:
     if (i >= 0 and i <= self.__numItems):
       prev = self.getNode(i - 1)
-      newNode = BidirectNode(key, val, prev, prev.next)
+      newNode = BidirectNode(newItem, prev, prev.next)
       newNode.next.prev = newNode
       prev.next = newNode
       self.__numItems += 1
     else:
       print("index", i ,": out of bound in insert()")
   
-  def append(self, key, val) -> None:
+  def append(self, newItem) -> None:
     prev = self.__head.prev
-    newNode = BidirectNode(key, val, prev, self.__head)
+    newNode = BidirectNode(newItem, prev, self.__head)
     prev.next = newNode
     self.__head.prev = newNode
     self.__numItems += 1
@@ -47,13 +41,13 @@ class CircularDoublyLinkedList:
     else:
       return None
   
-  def remove(self, id):
-    curr = self.__findNode(id)
+  def remove(self, x):
+    curr = self.__findNode(x)
     if curr != None:
       curr.prev.next = curr.next
-      curr.next.prev = curr.prev
+      curr.nexxt.prev = curr.prev
       self.__numItems -= 1
-      return id
+      return x
     else:
       return None
   
@@ -84,7 +78,7 @@ class CircularDoublyLinkedList:
     return self.__numItems
   
   def clear(self):
-    self.__head = BidirectNode("dum_key", "dum_val", "dummy", None, None)
+    self.__head = BidirectNode("dummy", None, None)
     self.__head.prev = self.__head
     self.__head.next = self.head
     self.__numItems = 0
@@ -98,8 +92,7 @@ class CircularDoublyLinkedList:
   
   def extend(self, a):
     for element in a:
-      key, val = element[0], element[1]
-      self.append(key, val)
+      self.append(element)
   
   def copy(self) -> 'CircularDoublyLinkedList':
     a = CircularDoublyLinkedList()
