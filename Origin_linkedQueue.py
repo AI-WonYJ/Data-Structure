@@ -1,4 +1,4 @@
-from circularLinkedList import CircularLinkedList
+from Origin_circularLinkedList import CircularLinkedList
 
 class LinkedQueue:
   def __init__(self):

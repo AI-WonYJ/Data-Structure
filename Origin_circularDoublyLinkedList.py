@@ -1,4 +1,4 @@
-from bidirectNode import BidirectNode
+from Origin_bidirectNode import BidirectNode
 
 class CircularDoublyLinkedList:
   def __init__(self):

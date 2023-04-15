@@ -1,4 +1,4 @@
-from circularDoublyLinkedList import *
+from Origin_circularDoublyLinkedList import *
 
 list = CircularDoublyLinkedList()
 list.append(30); list.insert(0, 20)

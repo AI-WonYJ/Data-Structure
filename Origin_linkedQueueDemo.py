@@ -1,4 +1,4 @@
-from linkedQueue import LinkedQueue
+from Origin_linkedQueue import LinkedQueue
 
 q1 = LinkedQueue()
 q1.enqueue("Mon")
