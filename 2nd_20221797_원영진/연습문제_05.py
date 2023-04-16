@@ -14,16 +14,10 @@ class TwoStackQueue:
     
   def dequeue(self):
     return self.__q1.pop()
-    
-  def printStack(self):
-    self.__q1.printStack()
-    self.__q2.printStack()
   
 if __name__ == '__main__':
   st = TwoStackQueue()
   for i in range(1, 4):
     st.enqueue(i)
-    st.printStack()
   for j in range(1, 4):
     print(st.dequeue())
-    st.printStack()
