@@ -50,14 +50,28 @@ class Heap:
   def size(self) -> int:
     return len(self.__A)
 
+  # def heapPrint(self):
+  #   if not self.isEmpty():
+  #     count = 1
+  #     for i in range(0, len(self.__A)):
+  #       print(self.__A[i], end = ' ')
+  #       if i+2 == 2**count:
+  #         print()
+  #         count += 1
+  #     print("\n==============================\n")
+  #   else:
+  #     print("None")
+      
+      
   def heapPrint(self):
-    count = 0
-    for i in range(0, len(self.__A), 1):
-      count += 1
-      if ((i - 1) // 2) != ((i - 2) // 2):
-        print(self.__A[i])
-      else: 
-        print(self.__A[i], end=" ")
-      
-      
-    print("\n==============================\n")
+    if not self.isEmpty():
+      count = 1
+      for i in range(0, len(self.__A)):
+        if i+2 == 2**count:
+          print(self.__A[i])
+          count += 1
+        else:
+          print(self.__A[i], end = ' ')
+      print("\n==============================\n")
+    else:
+      print("None")
