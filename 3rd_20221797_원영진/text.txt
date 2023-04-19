@@ -1,0 +1,3 @@
+과제 2. 힙을 사용해 LFU 시뮬레이터 구현하기
+
+https://docs.google.com/document/d/1Cny-68Tbcji996zVh7PqBR4Ga6WFiaUL4T0P9QJnLFM/edit
