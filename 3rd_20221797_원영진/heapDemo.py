@@ -14,4 +14,4 @@ h1.insert(21)
 h1.insert(11)
 h1.heapPrint()
 h1.deleteMax()
-h1.heapPrint
+h1.heapPrint()

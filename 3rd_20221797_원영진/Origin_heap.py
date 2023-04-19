@@ -54,4 +54,5 @@ class Heap:
     for i in range(0, len(self.__A), 1):
       print(self.__A[i])
       
+      
     print("\n==============================\n")
