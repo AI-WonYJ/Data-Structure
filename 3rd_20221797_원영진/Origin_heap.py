@@ -51,8 +51,13 @@ class Heap:
     return len(self.__A)
 
   def heapPrint(self):
+    count = 0
     for i in range(0, len(self.__A), 1):
-      print(self.__A[i])
+      count += 1
+      if ((i - 1) // 2) != ((i - 2) // 2):
+        print(self.__A[i])
+      else: 
+        print(self.__A[i], end=" ")
       
       
     print("\n==============================\n")
