@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(10**6)
+
 def quickSort(A, p:int, r:int):
   if p < r:
     q = partition(A, p, r)
@@ -5,10 +8,10 @@ def quickSort(A, p:int, r:int):
     quickSort(A, q+1, r)
     
 def partition(A, p:int, r:int) -> int:
-  x = A[r]
+  x = A[r][1]
   i = p-1
   for j in range(p, r):
-    if A[j] < x:
+    if A[j][1] < x:
       i += 1
       A[i], A[j] = A[j], A[i]    
   A[i+1], A[r] = A[r], A[i+1]
