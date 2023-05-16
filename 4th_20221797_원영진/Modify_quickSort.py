@@ -11,7 +11,7 @@ def partition(A, p:int, r:int) -> int:
   x = A[r][1]
   i = p-1
   for j in range(p, r):
-    if A[j][1] < x:
+    if A[j][1] > x: 
       i += 1
       A[i], A[j] = A[j], A[i]    
   A[i+1], A[r] = A[r], A[i+1]
